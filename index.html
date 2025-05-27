@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard Pattern</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .checkerboard-container {
+            border: 4px solid #000;
+            padding: 3px;
+            background: #000;
+        }
+
+        .checkerboard {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 400px;
+            height: 400px;
+            gap: 0;
+        }
+
+        .square {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .square:nth-child(odd) {
+            background: #FFB6C1;
+        }
+
+        .square:nth-child(even) {
+            background: #000;
+        }
+
+        /* Override for proper checkerboard pattern */
+        .square:nth-child(8n+1),
+        .square:nth-child(8n+3),
+        .square:nth-child(8n+5),
+        .square:nth-child(8n+7) {
+            background: #FFB6C1;
+        }
+
+        .square:nth-child(8n+2),
+        .square:nth-child(8n+4),
+        .square:nth-child(8n+6),
+        .square:nth-child(8n+8) {
+            background: #000;
+        }
+
+        /* Second row pattern (inverted) */
+        .square:nth-child(n+9):nth-child(-n+16):nth-child(odd) {
+            background: #000;
+        }
+
+        .square:nth-child(n+9):nth-child(-n+16):nth-child(even) {
+            background: #FFB6C1;
+        }
+
+        /* Third row pattern (same as first) */
+        .square:nth-child(n+17):nth-child(-n+24):nth-child(odd) {
+            background: #FFB6C1;
+        }
+
+        .square:nth-child(n+17):nth-child(-n+24):nth-child(even) {
+            background: #000;
+        }
+
+        /* Fourth row pattern (inverted) */
+        .square:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+            background: #000;
+        }
+
+        .square:nth-child(n+25):nth-child(-n+32):nth-child(even) {
+            background: #FFB6C1;
+        }
+
+        /* Fifth row pattern (same as first) */
+        .square:nth-child(n+33):nth-child(-n+40):nth-child(odd) {
+            background: #FFB6C1;
+        }
+
+        .square:nth-child(n+33):nth-child(-n+40):nth-child(even) {
+            background: #000;
+        }
+
+        /* Sixth row pattern (inverted) */
+        .square:nth-child(n+41):nth-child(-n+48):nth-child(odd) {
+            background: #000;
+        }
+
+        .square:nth-child(n+41):nth-child(-n+48):nth-child(even) {
+            background: #FFB6C1;
+        }
+
+        /* Seventh row pattern (same as first) */
+        .square:nth-child(n+49):nth-child(-n+56):nth-child(odd) {
+            background: #FFB6C1;
+        }
+
+        .square:nth-child(n+49):nth-child(-n+56):nth-child(even) {
+            background: #000;
+        }
+
+        /* Eighth row pattern (inverted) */
+        .square:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+            background: #000;
+        }
+
+        .square:nth-child(n+57):nth-child(-n+64):nth-child(even) {
+            background: #FFB6C1;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkerboard-container">
+        <div class="checkerboard">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+</body>
+</html>
